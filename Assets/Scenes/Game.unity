@@ -2974,6 +2974,7 @@ GameObject:
   - component: {fileID: 5595375185120783341}
   - component: {fileID: 1701996767310687021}
   - component: {fileID: 1511085971739675169}
+  - component: {fileID: 5595375185120783342}
   m_Layer: 0
   m_Name: fast_enemy_wheels
   m_TagString: Untagged
@@ -3108,6 +3109,7 @@ GameObject:
   - component: {fileID: 7013736706932616295}
   - component: {fileID: 8679484686245485395}
   - component: {fileID: 3868311724661083692}
+  - component: {fileID: 8679484686245485396}
   m_Layer: 0
   m_Name: basic_enemy_wheels_front
   m_TagString: Untagged
@@ -3322,6 +3324,7 @@ GameObject:
   - component: {fileID: 180322930064091215}
   - component: {fileID: 2838403052154953180}
   - component: {fileID: 8156637895569511603}
+  - component: {fileID: 8156637895569511604}
   m_Layer: 0
   m_Name: basic_enemy_wheels_back
   m_TagString: Untagged
@@ -3396,6 +3399,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4896814552198889523}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5595375185120783342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050942448899033124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ef1426c10e5e041b30a26681b4127f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAxis: {x: 1, y: 0, z: 0}
+  rotationSpeed: 7
 --- !u!33 &6227114062661582333
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3490,6 +3507,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8156637895569511604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4787078845495577101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ef1426c10e5e041b30a26681b4127f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAxis: {x: 1, y: 0, z: 0}
+  rotationSpeed: 3.5
 --- !u!4 &8312632259347671755
 Transform:
   m_ObjectHideFlags: 0
@@ -3513,6 +3544,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2621905965874107868}
   m_Mesh: {fileID: 3414993952103692016, guid: d3e3ad3a1f00efe4e918391353303381, type: 3}
+--- !u!114 &8679484686245485396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2621905965874107868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ef1426c10e5e041b30a26681b4127f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAxis: {x: 1, y: 0, z: 0}
+  rotationSpeed: 3.5
 --- !u!4 &9035856582104909783
 Transform:
   m_ObjectHideFlags: 0

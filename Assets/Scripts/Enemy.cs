@@ -83,7 +83,8 @@ public class Enemy : MonoBehaviour
 
         if (waypointIndex >= waypoint.Length)
         {
-            return transform.position; // Return current position if no more waypoints are available
+            waypointIndex = 0; // Reset to the first waypoint if all have been visited
+            // return transform.position; // Return current position if no more waypoints are available
         }
 
         Vector3 nextWaypoint = waypoint[waypointIndex].position;
