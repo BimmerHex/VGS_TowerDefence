@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private float turnSpeed = 10f; // Speed at which the enemy turns to face the target
 
-    [SerializeField] private Transform[] waypoint;
+    [SerializeField] private Transform[] waypoints;
 
     private int waypointIndex = 0;
 
@@ -20,22 +20,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        if (waypoint != null)
-        {
-            Vector3 nextWaypoint = GetNextWaypoint();
-            if (nextWaypoint != Vector3.zero)
-            {
-                navMeshAgent.SetDestination(nextWaypoint);
-            }
-            else
-            {
-                Debug.LogWarning("Next waypoint is not valid.");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("Waypoint is not assigned for the enemy.");
-        }
+        waypoints = FindFirstObjectByType<WaypointManager>().GetWaypoints();
     }
 
     private void Update()
@@ -75,19 +60,19 @@ public class Enemy : MonoBehaviour
     
     private Vector3 GetNextWaypoint()
     {
-        if (waypoint.Length == 0)
+        if (waypoints.Length == 0)
         {
             Debug.LogWarning("No waypoints assigned.");
             return Vector3.zero;
         }
 
-        if (waypointIndex >= waypoint.Length)
+        if (waypointIndex >= waypoints.Length)
         {
             waypointIndex = 0; // Reset to the first waypoint if all have been visited
             // return transform.position; // Return current position if no more waypoints are available
         }
 
-        Vector3 nextWaypoint = waypoint[waypointIndex].position;
+        Vector3 nextWaypoint = waypoints[waypointIndex].position;
         waypointIndex++;
 
         return nextWaypoint;
