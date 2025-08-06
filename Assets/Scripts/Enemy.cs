@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         navMeshAgent.updateRotation = false; // Disable automatic rotation to control it manually if needed
+        navMeshAgent.avoidancePriority = Mathf.RoundToInt(navMeshAgent.speed * 10f); // Set avoidance priority based on speed
     }
 
     private void Start()
